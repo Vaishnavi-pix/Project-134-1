@@ -45,15 +45,15 @@ b=random(255);
             stroke(r,g,b);
             rect(object[i].x, object[i].y, object[i].width, object[i].height);
 
-            if(object[i].label != "person"){
-                document.getElementById("baby_detected").innerHTML="Baby not found";
-                alarm.play();
-            }
-            else{
-    document.getElementById("baby_detected").innerHTML="Baby found";
-    alarm.stop();
             
         }
+        if(object.length <= 0){
+            document.getElementById("baby_detected").innerHTML="Baby not found";
+            alarm.play();
+        }
+        else{
+document.getElementById("baby_detected").innerHTML="Baby found";
+alarm.stop();
         
         }
     }
